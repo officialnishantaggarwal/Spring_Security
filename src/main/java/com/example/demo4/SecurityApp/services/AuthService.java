@@ -22,7 +22,7 @@ public class AuthService {
     public LoginResponseDto login(LoginDto loginDto) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(loginDto.getEmail(),loginDto.getPassword())
-        );
+        ); // this will use DaoAuthenticationProvider provider to check the email and password using loadUserByUsername
         User user = (User) authentication.getPrincipal();
         String accessToken = jwtService.generateAccessToken(user);
         String refreshToken = jwtService.generateRefreshToken(user);
