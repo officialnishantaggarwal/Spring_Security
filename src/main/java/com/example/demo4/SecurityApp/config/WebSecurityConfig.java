@@ -30,9 +30,9 @@ import static com.example.demo4.SecurityApp.entities.enums.Role.ADMIN;
 import static com.example.demo4.SecurityApp.entities.enums.Role.CREATOR;
 
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity // want to customize the security rules for web (HTTP) requests
 @RequiredArgsConstructor
-@EnableMethodSecurity(securedEnabled = true)
+@EnableMethodSecurity(securedEnabled = true) // enables method-level security in Spring apps
 public class WebSecurityConfig {
 
     private final JwtAuthFilter jwtAuthFilter;
