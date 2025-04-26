@@ -73,6 +73,7 @@ public class WebSecurityConfig {
         return config.getAuthenticationManager();
     }
 
+    // InMemoryUserDetailsManager it is implementation of UserDetailsService interface as we do in UserService to load user
 //    @Bean
 //    UserDetailsService myInMemoryUserDetailsService(){
 //        UserDetails normalUser = User
